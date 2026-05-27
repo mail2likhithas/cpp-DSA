@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+
+
+int main(){
+    int arr[]={2,3,4,5,6};
+    int n=sizeof(arr)/sizeof(int);
+    
+    int copyArr[n];
+    
+    //reverse copy
+    for(int i=0;i<n;i++){
+        int j=n-i-1;
+        copyArr[i]=arr[j];
+    }
+    
+    
+    //copy back
+    for(int i=0;i<n;i++){
+        arr[i]=copyArr[i];
+    }
+    
+    
+    //print
+    for(int i=0;i<n;i++){
+    cout<<arr[i];
+    }
+    
+    return 0;
+    
+    
+}
